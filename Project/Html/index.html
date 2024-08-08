@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="../Css/style.css">
+</head>
+<body>
+   
+    <form>
+        <p>Registration Form</p>
+        <label>First Name</label>
+        <input type="text" id="fname" placeholder="Enter your first name...">
+        <label>Middle Name</label>
+        <input type="text" id="mname" placeholder="Enter your middle name...">
+        <label>Last Name</label>
+        <input type="text" id="lname" placeholder="Enter your last name...">
+        <label>E-mail</label>
+        <input type="text" id="email" placeholder="abc@gmail.com">
+        <label>Gender</label>
+        <select name="Gender" id="gen">     
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+        </select>
+        <label>Phone Number</label>
+        <input type="number" id="phone" placeholder="1234567890">
+        <button onclick="get()">Submit</button>
+        
+
+
+
+
+    </form>
+
+
+
+<script>
+    
+function get(){
+    var f=document.getElementById("fname").value;
+    var m=document.getElementById("mname").value;
+    var l=document.getElementById("lname").value;
+    var e=document.getElementById("email").value;
+    var i=doocument.getElementById("gen").value;
+    var p=document.getElementById("phone").value;
+
+    localStorage.setItem("fname",f);
+    localStorage.setItem("mname",m);
+    localStorage.setItem("lname",l);
+    localStorage.setItem("email",e);
+    localStorage.setItem("gen",i);
+    localStorage.setItem("phone",p);
+  
+}
+
+</script>
+
+</body>
+</html>
